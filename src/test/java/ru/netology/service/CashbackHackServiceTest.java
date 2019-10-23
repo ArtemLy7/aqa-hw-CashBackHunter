@@ -28,4 +28,14 @@ class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    void shouldReturn0IfAmountIs10() {
+        CashbackHackService chs = new CashbackHackService();
+        int amount = 10;
+
+        int actual = chs.remain(amount);
+        int expected = 990;
+
+        assertEquals(expected, actual);
+    }
 }
